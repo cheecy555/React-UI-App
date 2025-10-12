@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+.main-layout {
+  /* height: 100dvh; */
+  background-color: aliceblue;
+}
+
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  /* display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto minmax(0, 1fr);
+  grid-template-areas: "header" "main"; */
+  background-color: var(--portal-top-bg);
+  color: var(--c-con-9);
+  /* height: 100vh; */
+}
+
+.main-layout > main,
+.main-area {
+  grid-area: main;
+  overflow-y: auto;
+}
+
+:root {
+  --portal-top-bg: aliceblue;
+  --portal-main: royalblue;
+  --c-con-1: rgba(0, 0, 0, 10%);
+  --c-con-2: rgba(0, 0, 0, 20%);
+  --c-con-3: rgba(0, 0, 0, 30%);
+  --c-con-4: rgba(0, 0, 0, 40%);
+  --c-con-5: rgba(0, 0, 0, 50%);
+  --c-con-6: rgba(0, 0, 0, 60%);
+  --c-con-7: rgba(0, 0, 0, 70%);
+  --c-con-8: rgba(0, 0, 0, 80%);
+  --c-con-9: rgba(0, 0, 0, 90%);
+  --c-conf-1: rgba(255, 255, 255, 10%);
+  --c-conf-2: rgba(255, 255, 255, 20%);
+  --c-conf-3: rgba(255, 255, 255, 30%);
+  --c-conf-4: rgba(255, 255, 255, 40%);
+  --c-conf-5: rgba(255, 255, 255, 50%);
+  --c-conf-6: rgba(255, 255, 255, 60%);
+  --c-conf-7: rgba(255, 255, 255, 70%);
+  --c-conf-8: rgba(255, 255, 255, 80%);
+  --c-conf-9: rgba(255, 255, 255, 90%);
+  --header-height: 56px;
+  --sidebar-width: 200px;
+  --sidebar-width-collapse: 41px;
+  --b-border-radius: 10px;
+  --b-bg-color: #1976d2;
+  --b-text-color: white;
+  --portal-footer-bg: royalblue;
+  --link-color: rgb(92, 92, 243);
+
+}
+
+.theme-button {
+  background-color: var(--b-bg-color);
+  border-radius: var(--b-border-radius);
+  color: var(--b-text-color);
+}
+
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+dialog {
+  padding: 0px;
+  border: none;
+  width: 100vw;
+  background-color: transparent;
+}
+
+.material-icons-outlined {
+  vertical-align: middle;
+}
+
+summary {
+  cursor: pointer;
+}
+
+.table {
+  font-size: 0.875rem;
+}
+.table th,
+.table td {
+  border: 1px solid lightgray;
+  padding-inline: 12px;
+  padding-block: 8px;
+  line-height: 1.1;
+}
+
+form:not([data-form-status="busy"]) button[type="submit"] .form-busy {
+  display: none;
+}
+
+form:not([data-form-status="ready"]) button[type="submit"] .form-ready {
+  display: none;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+.js-plotly-plot .modebar {
+  top: 15% !important;
+  left: 1135px !important;
+  transform: translateY(-50%) rotate(0deg);
+  flex-direction: column;
+}
